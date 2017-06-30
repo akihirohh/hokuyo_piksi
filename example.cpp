@@ -113,7 +113,6 @@ void sbp_uart_state_callback(u16 sender_id, u8 len, u8 msg[], void *context)
 {
   uart_state = *(msg_uart_state_t *)msg;
 }
-
 void sbp_tracking_state_detailed_callback(u16 sender_id, u8 len, u8 msg[], void *context)
 {
   tracking_state_detailed = *(msg_tracking_state_detailed_t *)msg;
@@ -202,8 +201,6 @@ u32 piksi_port_read(u8 *buff, u32 n, void *context)
 
   return result;
 }
-
-void *dataLogging(void *ptr);
 
 int main(int argc, char *argv[])
 {
